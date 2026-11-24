@@ -1,0 +1,386 @@
+/* ===== GLOBAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ===== NAVBAR ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: #1e3a5f;
+  color: #fff;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #f4b400;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links a {
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f4b400;
+}
+
+/* Hamburger hidden on desktop */
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* ===== HERO ===== */
+.hero {
+  background: linear-gradient(rgba(30, 58, 95, 0.8), rgba(30, 58, 95, 0.8)),
+              url("https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1200") center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 25px;
+}
+
+/* ===== BUTTON ===== */
+.btn {
+  display: inline-block;
+  background: #f4b400;
+  color: #1e3a5f;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #ffd54f;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 70px 40px;
+  text-align: center;
+}
+
+.alt-bg {
+  background: #f5f7fa;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #1e3a5f;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  max-width: 650px;
+  margin: 0 auto 40px;
+  color: #666;
+}
+
+/* ===== ABOUT STATS (flexbox) ===== */
+.stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.stat-card {
+  background: #fff;
+  padding: 30px;
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3 {
+  font-size: 2rem;
+  color: #1e3a5f;
+}
+
+/* ===== COURSE TABLE ===== */
+.course-table {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.course-table th,
+.course-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.course-table th {
+  background: #1e3a5f;
+  color: #fff;
+}
+
+.course-table tbody tr:hover {
+  background: #fdf6e3;
+}
+
+/* ===== TEAM (flexbox) ===== */
+.team-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.team-card {
+  background: #fff;
+  width: 240px;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.team-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  object-fit: cover;
+}
+
+.team-card h3 {
+  color: #1e3a5f;
+}
+
+.role {
+  color: #f4b400;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* ===== CONTACT FORM ===== */
+.contact-form {
+  max-width: 550px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  text-align: left;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-row label {
+  font-weight: bold;
+  color: #1e3a5f;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+  padding: 11px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: #1e3a5f;
+  box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.15);
+}
+
+.contact-form .btn {
+  align-self: flex-start;
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+  background: #1e3a5f;
+  color: #ddd;
+  padding: 50px 40px 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto 30px;
+}
+
+.footer-content div {
+  flex: 1;
+  min-width: 200px;
+}
+
+.site-footer h4 {
+  color: #f4b400;
+  margin-bottom: 12px;
+}
+
+.site-footer ul {
+  list-style: none;
+}
+
+.site-footer li {
+  margin-bottom: 8px;
+}
+
+.site-footer a:hover {
+  color: #f4b400;
+}
+
+.copyright {
+  text-align: center;
+  border-top: 1px solid #355a85;
+  padding-top: 20px;
+  font-size: 0.9rem;
+}
+
+/* ===== MEDIA QUERIES (MOBILE) ===== */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    margin-top: 12px;
+    background: #1e3a5f;
+  }
+
+  .nav-links li {
+    border-top: 1px solid #355a85;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 12px 0;
+  }
+
+  /* Show menu when hamburger is clicked */
+  .menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+
+  .hero {
+    padding: 80px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .section {
+    padding: 50px 20px;
+  }
+
+  .course-table th,
+  .course-table td {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .footer-content {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .stat-card,
+  .team-card {
+    width: 100%;
+    max-width: 280px;
+  }
+}
